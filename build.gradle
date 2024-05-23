@@ -12,6 +12,7 @@ plugins {
 repositories {
     mavenCentral()
     maven { url "https://repo.grails.org/grails/core/" }
+    maven { url 'https://nexus.ala.org.au/content/groups/public/'}
 }
 
 configurations {
@@ -41,7 +42,7 @@ dependencies {
 
     implementation "org.grails.plugins:gsp:6.2.1"
     implementation 'org.grails.plugins:mail:4.0.0'
-    implementation project('au.org.ala:ala-mail:1.0.0-SNAPSHOT')
+    implementation 'au.org.ala:ala-mail:1.0.0-SNAPSHOT'
 
     compileOnly("io.micronaut:micronaut-inject-groovy")
 
