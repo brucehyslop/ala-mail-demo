@@ -9,8 +9,8 @@ class ApplicationController implements PluginManagerAware {
     GrailsApplication grailsApplication
     GrailsPluginManager pluginManager
 
-    static final String FROM = 'test@ala.org.au'
-    static final String TO = 'ala.test@bruce-hyslop.com'
+    static final String FROM = 'ALA Test<test@ala.org.au>'
+    static final String TO = 'ala.test2@bruce-hyslop.com'
     static final String SUBJECT = "Amazon SES test (AWS SDK for Java)";
     static final String HTMLBODY = "<h1>Amazon SES test (AWS SDK for Java)</h1>" +
             "<p>This email was sent with <a href='https://aws.amazon.com/ses/'>" +
@@ -25,7 +25,7 @@ class ApplicationController implements PluginManagerAware {
         sendMail {
             from FROM
             subject SUBJECT
-            bcc TO
+            to TO
             html HTMLBODY
         }
 
